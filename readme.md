@@ -1,0 +1,1 @@
+This is child parent assignment where from the given card I have identified the atoms, molecules and other components of atomic structure and designed the card using the material UI and theming concepts.

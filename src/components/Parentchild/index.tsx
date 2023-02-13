@@ -9,28 +9,38 @@ import Typography1 from '../atoms/Typography';
 import Textdivider1 from '../molecules/Textdivider';
 import AvatarText1 from '../molecules/Avatartext';
 import theme from '../../theme';
-
+import Statemgmnt from '../organism/Statemanagement';
 
 const Parentchild =()=> {
+
+    const [isClicked, setIsToggled] = React.useState(false);
+
+//     const [value, setvalue] =React.useState(0.0234510)
+//     const handleChange =(event: any, newValue: React.SetStateAction<any>) => {
+//       setvalue(newValue)
+//     }
+// console.log({value});
     return (
-        <><Typography variant="body1" gutterBottom sx={{ textAlign: 'center', mt: 10, mb:5 }}> 3. The amount in the payments card must be changed while sliding the slider. </Typography><>
+        <Box>
             <Stack component="span" 
                 sx={{
                     border:'2px solid whitesmoke',
                     mx:50,
                     height:250,
                     borderRadius:1,
+                    mt:5,
                 }}>
                  <Typography variant="subtitle1" gutterBottom sx={{pl:2}}>Amount details</Typography> 
             <TextButton1 buttonVariant={'outlined'} buttonName={'Buy Max'} typoVariant={'h6'} typoName={'$34,000.00'}
             typoSx={{ paddingLeft: 3, paddingTop: 2 }} 
             buttonSx={{color:"theme.palette.primary.main",fontWeight:"bold",maxWidth:100,position:"absolute",marginLeft:63,marginTop:1.4,textTransform:"none"}}/>
 
+            {/* <Slider1 value={value} handleChange={handleChange} /> */}
             <Slider1 />
-
-            <TextButton1 buttonVariant={'text'} buttonName={'BTC'} typoVariant={'h6'} typoName={'0.0234510'} 
+            <TextButton1 buttonVariant={'text'} buttonName={'BTC'} typoVariant={'h6'} typoName={"0.0234510"} 
             typoSx={{ paddingLeft: 3, paddingTop:1.5 }} 
             buttonSx={{marginLeft:68,position:"absolute",marginTop:1,color:"grey",fontWeight:"bold"}} /> 
+
             </Stack>     
 
             <Box
@@ -70,9 +80,10 @@ const Parentchild =()=> {
                 typo2Sx={{paddingLeft:1,paddingTop:1}} divSx= {{borderStyle:'dashed',width:493,marginBottom:1,marginLeft:1}} 
                  typo1Variant={"subtitle2"} />
 
-                 <Button variant="contained" sx={{width:600,backgroundColor:theme.palette.secondary.main,mt:2,mx:5,height:35}}>Buy Now</Button>
+                 <Button variant="contained" sx={{width:600,backgroundColor:theme.palette.secondary.main,mt:2,mx:5,height:35}} onClick={()=> setIsToggled(!isClicked)}>Buy Now</Button>
+                 {isClicked ? <Statemgmnt /> : <p>Button is not clicked</p>}
                 </Box>
-        </></>
+        </Box>
     );
 }
 

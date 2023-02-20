@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function HookCounter() {
+const HookCounter = ()=> {
   const [count, setCount] = useState(0)
     return (
         <div>

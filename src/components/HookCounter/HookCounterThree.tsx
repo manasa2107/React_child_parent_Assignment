@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function HookCounterThree() {
+const HookCounterThree =() => {
     const [name, setName] = useState({firstName: '', lastName: ''})
     return (
         <form>

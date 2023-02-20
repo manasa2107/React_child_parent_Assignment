@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-function HookCounterTwo(){
+const HookCounterTwo =() => {
     const initialCount=0
     const [count, setCount]=useState(initialCount)
 

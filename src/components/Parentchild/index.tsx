@@ -50,7 +50,6 @@ const Parentchild =()=> {
                     mt:2,
                     width: '670px',
                     height: '500px',
-                   borderColor:"whitesmoke",
                    borderLeft:1,
                    borderLeftColor:'whitesmoke',
                    borderBottom:1,
